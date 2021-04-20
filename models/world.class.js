@@ -22,9 +22,9 @@ class World {
     checkCollisions() {
         setInterval(() => {
             this.level.enemies.forEach((enemy) => {
-               if( this.character.isColliding(enemy) ) {
-                   console.log('Collision with Character ', enemy);
-               }
+                if (this.character.isColliding(enemy)) {
+                    this.character.hit();
+                }
             });
         }, 200);
     }
